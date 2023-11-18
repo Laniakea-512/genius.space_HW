@@ -5,18 +5,31 @@
   --color-brand-dark: #465929;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 header {
-  background-image: url("images/image\ 1559.jpg");
-  width: 1440px;
-  height: 798px;
+  background-color: #465929;
 }
 
 .button {
+  padding: 16px 32px;
   color: var(--color-primary-light);
   background: var(--color-brand-light);
   border: 2px solid var(--color-brand-light);
   border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .button:hover {
@@ -24,19 +37,9 @@ header {
   color: var(--color-brand-dark);
 }
 
-/* .button:focus {
-  background-color: hotpink;
-  color: #465929;
-}
-
-.button:active {
-  background-color: hotpink;
-  color: #465929;
-}
-*/
-
 .link {
   color: var(--color-primary-light);
+  text-decoration: none;
 }
 
 .link:hover {
@@ -45,31 +48,208 @@ header {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-title {
   color: var(--color-primary-light);
+  text-align: center;
+  font-size: 128px;
+  font-weight: 900;
+  margin-bottom: 0;
 }
 
 .hero-title .accent {
   color: var(--color-brand-light);
 }
 
-.advantages-list {
+.hero-section {
+  padding: 272px 0; 
+  background-image: url("images/hero-section-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.advantages-section {
+  padding: 16px 0;
   background-color: var(--color-brand-light);
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.adventages-item {
+  font-size: 20px;
+  font-weight: 300;
   color: var(--color-primary-light);
 }
 
 body {
   color: var(--color-primary-dark);
   background-color: var(--color-primary-light);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5; 
+  margin: 0;
+}
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.section-title {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.3;
 }
 
 .section-title .accent {
   color: var(--color-brand-dark);
+}
+
+.traditions-text .brand {
+  color: var(--color-brand-light);
+  font-weight: 600;
+}
+
+.traditions-text .uppercase {
+  text-transform: uppercase;
+  color: var(--color-brand-light);
+}
+
+.traditions-section {
+  padding-top: 96px;
+}
+
+.traditions-conteiner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.traditions-content {
+  max-width: 710px;
+}
+
+.chef-title {
+  margin-bottom: 16px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.format-section {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.format-text {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.formats-title {
+  margin-bottom: 80px;
+}
+
+.format-card {
+  border: 1px solid #465929;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.formats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.formats-item {
+  display: flex;
+  flex-basis: calc(
+    (100% - 40px) / 3
+  );
+  flex-wrap: wrap;
+}
+
+.address-link {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.address-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.address-copyright {
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.traditions-title {
+  margin-bottom: 42px;
+}
+
+.chefs-title {
+  margin-bottom: 80px;
+}
+
+.contact-title {
+  margin-bottom: 16px;
+}
+
+.conteiner {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px; 
+}
+
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 64px;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: var(--color-primary-dark);
+  background-image: url("images/footer-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
